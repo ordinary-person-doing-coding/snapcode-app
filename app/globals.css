@@ -124,7 +124,7 @@
   }
 }
 
-/* Fix dropdown menus to be dark with white text */
+/* Fix dropdown menus to be dark with WHITE text - STRONG VERSION */
 [data-radix-select-content] {
   background-color: #111827 !important;
   border-color: #4b5563 !important;
@@ -132,12 +132,20 @@
 
 [data-radix-select-item] {
   color: #ffffff !important;
-  background-color: transparent !important;
-  cursor: pointer;
+  background-color: #111827 !important;
+  cursor: pointer !important;
+}
+
+[data-radix-select-item] span {
+  color: #ffffff !important;
 }
 
 [data-radix-select-item]:hover {
   background-color: #1f2937 !important;
+  color: #ffffff !important;
+}
+
+[data-radix-select-item]:hover span {
   color: #ffffff !important;
 }
 
@@ -146,7 +154,20 @@
   color: #ffffff !important;
 }
 
+[data-radix-select-item][data-highlighted] span {
+  color: #ffffff !important;
+}
+
 [data-radix-select-item][data-state="checked"] {
   color: #ffffff !important;
   background-color: #374151 !important;
+}
+
+[data-radix-select-item][data-state="checked"] span {
+  color: #ffffff !important;
+}
+
+/* Target all text inside selects */
+.text-gray-900, .text-black, [class*="text-gray"] {
+  color: #ffffff !important;
 }
