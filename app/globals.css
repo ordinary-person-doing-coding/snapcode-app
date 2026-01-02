@@ -1,19 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Simple base styles - no @apply issues */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-geist-sans), sans-serif;
-}
-
-/* CRITICAL FIX: Force white text in ALL dropdowns */
+/* Dropdown fixes */
 [data-radix-select-content] {
   background-color: #111827 !important;
   border-color: #4b5563 !important;
@@ -53,7 +40,6 @@ body {
   color: #ffffff !important;
 }
 
-/* Force white on any nested elements */
 [data-radix-select-viewport] * {
   color: #ffffff !important;
 }
